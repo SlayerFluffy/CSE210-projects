@@ -9,6 +9,7 @@ public class Journal
 {
     // variables
     public List<Entry> _entries = new List<Entry>();
+    private string _fileName = "";
 
     // methods
     public Entry AddEntry()
@@ -31,12 +32,9 @@ public class Journal
         _entries.Add(currentEntry);
     }
 
-private const string fileName = "Journal.txt";
-    public void SaveToFile(List<Entry> currentEntry)
+    public void SaveToFile(string fileName, List<Entry> currentEntry)
     {
-        Console.WriteLine("Saving to file....");       
-
-        using (StreamWriter outputFile = new StreamWriter(fileName))
+        using (StreamWriter outputFile = new StreamWriter($"{fileName}.txt"))
         {
             foreach (Entry saveEntry in currentEntry)
             {
@@ -46,10 +44,10 @@ private const string fileName = "Journal.txt";
         }
     }
 
-    public static List<Entry> LoadFromFile()
+    public static List<Entry> LoadFromFile(string fileName)
     {
         List<Entry> _currentEntries = new List<Entry>();
-        string[] JournalLines = System.IO.File.ReadAllLines(fileName);
+        string[] JournalLines = System.IO.File.ReadAllLines($"{fileName}.txt");
 
         foreach (string line in JournalLines)
         {
