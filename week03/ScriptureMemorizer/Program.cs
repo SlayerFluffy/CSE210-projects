@@ -1,3 +1,4 @@
+// Stretch goals: I made a new class RandomVerse that contained 5 verses and references, and its job was to select and return one of them at random to use in the game. It has single and multiple verse options.
 using System;
 using System.IO;
 
