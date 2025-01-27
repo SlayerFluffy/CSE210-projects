@@ -9,7 +9,6 @@ public class Journal
 {
     // variables
     public List<Entry> _entries = new List<Entry>();
-    private string _fileName = "";
 
     // methods
     public Entry AddEntry()
