@@ -1,0 +1,105 @@
+Youtube Project
+----------------
+
+Video Class:
+-------------------
+Attributes:
+_title: String
+_author: String
+_length: Int
+_comments: List<Comment>
+---------------------------
+Constructor:
+Video(title:string, author:string, length:int)
+-------------------------------------------------------------
+Method:
+Get_Number_Of_Comments():int
+Add_Comment(comment):List<comment>
+------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+------------------------
+Comment Class:
+----------------------
+Attributes:
+_author: String
+_text: String
+---------------------
+Constructor:
+Comment(author:string, text:string)
+------------------------------------
+Method:
+Get_Comment():string
+
+*********************************************************************************************
+Ordering System Project
+-------------------------------
+
+Product Class:
+--------------------------------
+Attributes:
+_name: String
+_product_id: int
+_price: float
+_quantity: int
+------------------------------
+Constructor:
+Product(name:string, _product_id:int, price:float, quantity:int)
+------------------------------
+Method:
+Get_Product():string
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Address Class:
+-------------------------------
+Attributes:
+_streetAddress: String
+_city: String
+_state: String
+_country: String
+---------------------------------
+Constructor:
+Address(address:string, city:string, state:string, country:string)
+--------------------------------
+Method:
+Get_Local():bool
+Get_Addres():string
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Customer Class:
+--------------------------------
+Attributes:
+_name: String
+_address: Address
+--------------------------------
+Constructor:
+Customer(name:string, address:string)
+--------------------------------
+Method:
+Get_Local():bool *calls Get_Local() from Address*
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Order Class:
+--------------------------------
+Attributes:
+_customer: Customer
+_products: List<Product>
+_address: Address
+-------------------------------
+Constructor:
+Order(customer:string, address:string)
+-------------------------------
+Methods:
+Add_Product(): List<Product>
+Get_Shipping(): float *calls Get_Local*
+Get_Total(): float
+Packing_Label(): string
+Shipping_Label(): string
